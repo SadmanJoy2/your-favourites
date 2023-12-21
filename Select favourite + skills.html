@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Select</title>
+<style>
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: fit-content;
+  margin: auto;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {background-color: #ddd;}
+
+/* Create an active/current tablink class */
+.tab button.active {background-color: #ccc;}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+  text-align: center;
+}
+
+/* Style the image uploader */
+
+.center {
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.form-input {
+  width:200px;
+  padding:10px;
+  background:#fff;
+  box-shadow: -3px -3px 7px rgba(94, 104, 121, 0.377),
+              3px 3px 7px rgba(94, 104, 121, 0.377);
+  border-radius: 0.5rem;
+}
+
+.form-input input {display:none;}
+
+.form-input label {
+  display:block;
+  width:100%;
+  height:45px;
+  line-height:50px;
+  text-align:center;
+  border:1px dotted #1172c2;
+  color:#000000;
+  font-size:12px;
+  opacity: 0.6;
+  font-family:"Open Sans",sans-serif;
+  font-weight:600;
+  border-radius:5px;
+  cursor:pointer;
+}
+
+.form-input img {
+  width:195px;
+  display:none;
+  margin: auto;
+  margin-bottom:30px;
+  border-radius: 0.5rem;
+}
+
+body{background-color: #d4edda;}
+     h1{text-align: center; color: gold; font-family: cursive; -webkit-text-stroke: 1.5px black;}
+     .id{margin: auto;width: fit-content;}
+     hr{width: 70%;}
+     p{text-align: center; font-size: larger; padding: 2px;}
+     input{border-radius: 4px; padding: 2px; font-size: 15px;}
+     button{display: block;margin: auto; font-size: larger;}
+     ::placeholder{opacity: 0.8;}
+
+</style>
+</head>
+<body>
+
+     <!--Make tab buttons-->
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Favourite</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">Skills</button>
+</div><br>
+
+     <!--Make image div-->
+
+<div class="center">
+  <div class="form-input">
+    <div class="preview">
+      <img id="file-ip-1-preview">
+    </div>
+    <label for="file-ip-1">Add image</label>
+    <input type="file" id="file-ip-1" accept="image/*" onchange="showPreview(event);">
+    
+  </div>
+</div> 
+
+     <!--Favourite contents-->
+
+
+<div id="London" class="tabcontent"><br>
+    <div class="id">  <input type="text" size="15" value="Name : "> <br><br>  <input type="text" size="18" value="Profession :">
+    </div>
+     <hr>
+     <h1>My Favourite</h1>
+
+<p>Food <br><input type="text" size="30"></p>
+<p>Beverage / Drink <br> <input type="text"  size="30"></p>
+<p>Actors  <br> <input type="text" size="30"></p>
+<p>Actresses  <br> <input type="text" size="30"></p>
+<p>TV Show  <br> <input type="text" size="30"></p>
+<p>Movie  <br> <input type="text"  size="35"></p>
+<p>Colors  <br> <input type="text"  size="35"></p>
+<p>Destination  <br> <input type="text"  size="30"></p>
+<p>Perfume  <br> <input type="text" size="30"></p>
+<p>Book <br> <input type="text" size="30"></p>
+<p>Car <br> <input type="text"  size="35"></p>
+<p>Bike <br> <input type="text"  size="35"></p>
+<p>Outfit <br> <input type="text" size="30"></p>
+<p>Sport <br> <input type="text"  size="35"></p>
+<p>Spice <br> <input type="text" size="30"></p>
+<p>Song <br> <input type="text"  size="30"></p>
+<p>Song type <br> <input type="text" size="35"></p>
+<p>Collection <br> <input type="text"  size="30"></p>
+<p>Likes <br> <input type="text" size="30"></p>
+<p>Dislikes <br> <input type="text" size="30" ></p><br>
+<button  onclick="window.print()">Save as pdf</button>
+</div><br>
+
+     <!--Skill contents-->
+
+<div id="Paris" class="tabcontent">
+  <div class="id">  <input type="text" size="15" value="Name : "> <br><br>  <input type="text" size="18" value="Profession :">
+  </div><hr><br>
+  <table cellspacing="1" border="1" style="margin: auto; font-size: larger;">
+    <colgroup span="1" width="165"></colgroup>
+    <colgroup width="165"></colgroup>
+    <tr>
+      <td colspan=3 height="21" align="center" valign=bottom><font size=4 color="#000000">Can do</font></td>
+      </tr>
+    <tr>
+      <td height="21" align="center" valign=bottom><font size=3 color="#000000">Branch </font></td>
+      <td align="center" valign=bottom><font size=3 color="#000000">Skills </font></td>
+      <td align="left" valign=bottom><font color="#000000"><br></font></td>
+
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000">Computer/Digital<br></font></td>
+      <td align="left" valign=bottom><font color="#000000">MS office</font></td>
+      <td align="right" valign=bottom sdval="1" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"></font></td>
+      <td align="left" valign=bottom><font color="#000000">File management</font></td>
+      <td align="right" valign=bottom sdval="1" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Browser management</font></td>
+      <td align="right" valign=bottom sdval="1" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">G-mail management</font></td>
+      <td align="right" valign=bottom sdval="1" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Upload & Download</font></td>
+      <td align="right" valign=bottom sdval="1" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">File converting</font></td>
+      <td align="right" valign=bottom sdval="1" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Photo editing</font></td>
+      <td align="right" valign=bottom sdval="1" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Logo design</font></td>
+      <td align="right" valign=bottom sdval="1" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Chracter design</font></td>
+      <td align="right" valign=bottom sdval="1" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Video editing</font></td>
+      <td align="right" valign=bottom sdval="1" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Motion graphics</font></td>
+      <td align="right" valign=bottom sdval="1" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Autocad</font></td>
+      <td align="right" valign=bottom sdval="1" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">3D modeling</font></td>
+      <td align="right" valign=bottom sdval="0" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Programming</font></td>
+      <td align="right" valign=bottom sdval="0" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Web design / Frontend</font></td>
+      <td align="right" valign=bottom sdval="0" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Bacckend</font></td>
+      <td align="right" valign=bottom sdval="0" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Database</font></td>
+      <td align="right" valign=bottom sdval="0" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Networking</font></td>
+      <td align="right" valign=bottom sdval="0" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Cyber security</font></td>
+      <td align="right" valign=bottom sdval="0" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Digital forensic</font></td>
+      <td align="right" valign=bottom sdval="0" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Cryptography</font></td>
+      <td align="right" valign=bottom sdval="0" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Cloud computing</font></td>
+      <td align="right" valign=bottom sdval="0" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Audio mastering</font></td>
+      <td align="right" valign=bottom sdval="0" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Basic electronics</font></td>
+      <td align="right" valign=bottom sdval="0" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Arduino</font></td>
+      <td align="right" valign=bottom sdval="0" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">PC bulding</font></td>
+      <td align="right" valign=bottom sdval="0" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Problem solving</font></td>
+      <td align="right" valign=bottom sdval="0" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td colspan=3 height="21" align="left" valign=bottom bgcolor="#434343"><font color="#000000"><br></font></td>
+      </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000">Extra / hand skill </font></td>
+      <td align="left" valign=bottom><font color="#000000">Photography</font></td>
+      <td align="right" valign=bottom sdval="1" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Play chess</font></td>
+      <td align="right" valign=bottom sdval="1" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Drawing </font></td>
+      <td align="right" valign=bottom sdval="1" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Crafting </font></td>
+      <td align="right" valign=bottom sdval="1" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Acting</font></td>
+      <td align="right" valign=bottom sdval="0" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Gardening </font></td>
+      <td align="right" valign=bottom sdval="0" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Farming</font></td>
+      <td align="right" valign=bottom sdval="0" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Rubics cube 3x3</font></td>
+      <td align="right" valign=bottom sdval="1" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Play pool</font></td>
+      <td align="right" valign=bottom sdval="1" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Play carrom</font></td>
+      <td align="right" valign=bottom sdval="1" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Martial arts </font></td>
+      <td align="right" valign=bottom sdval="1" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Swimming </font></td>
+      <td align="right" valign=bottom sdval="0" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Handstand</font></td>
+      <td align="right" valign=bottom sdval="1" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Split</font></td>
+      <td align="right" valign=bottom sdval="1" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Ride a bicycle </font></td>
+      <td align="right" valign=bottom sdval="1" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Ride a bike </font></td>
+      <td align="right" valign=bottom sdval="1" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Drive car </font></td>
+      <td align="right" valign=bottom sdval="0" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Dancing</font></td>
+      <td align="right" valign=bottom sdval="0" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Singing</font></td>
+      <td align="right" valign=bottom sdval="0" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Beatboxing</font></td>
+      <td align="right" valign=bottom sdval="0" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Guiter</font></td>
+      <td align="right" valign=bottom sdval="0" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Origami</font></td>
+      <td align="right" valign=bottom sdval="0" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Good handwriting</font></td>
+      <td align="right" valign=bottom sdval="0" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Write both hands</font></td>
+      <td align="right" valign=bottom sdval="0" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Card shuffle </font></td>
+      <td align="right" valign=bottom sdval="0" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Bullseye </font></td>
+      <td align="right" valign=bottom sdval="0" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Cooking </font></td>
+      <td align="right" valign=bottom sdval="0" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Fly kite</font></td>
+      <td align="right" valign=bottom sdval="0" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Makeup </font></td>
+      <td align="right" valign=bottom sdval="0" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Tailoring </font></td>
+      <td align="right" valign=bottom sdval="0" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Phone repairing </font></td>
+      <td align="right" valign=bottom sdval="0" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Woodwork</font></td>
+      <td align="right" valign=bottom sdval="0" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Work left hand</font></td>
+      <td align="right" valign=bottom sdval="0" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Mimics </font></td>
+      <td align="right" valign=bottom sdval="0" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Voice changing </font></td>
+      <td align="right" valign=bottom sdval="0" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Unique skill</font></td>
+      <td align="right" valign=bottom sdval="0" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Survival skill</font></td>
+      <td align="right" valign=bottom sdval="1" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom bgcolor="#434343"><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom bgcolor="#434343"><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom bgcolor="#434343"><font color="#000000"><br></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000">God gifted </font></td>
+      <td align="left" valign=bottom><font color="#000000">keen eye</font></td>
+      <td align="right" valign=bottom sdval="0" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">keen listening</font></td>
+      <td align="right" valign=bottom sdval="0" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Taste power</font></td>
+      <td align="right" valign=bottom sdval="1" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">The power of smell</font></td>
+      <td align="right" valign=bottom sdval="0" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Good voice </font></td>
+      <td align="right" valign=bottom sdval="0" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Sixth senses </font></td>
+      <td align="right" valign=bottom sdval="0" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Fast learning</font></td>
+      <td align="right" valign=bottom sdval="0" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom bgcolor="#434343"><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom bgcolor="#434343"><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom bgcolor="#434343"><font color="#000000"><br></font></td>
+    </tr>
+    <tr>
+      
+      <td height="21" align="left" valign=bottom><font color="#000000">Must have</font></td>
+      <td align="left" valign=bottom><font color="#000000">Exel</font></td>
+      <td align="left" valign=bottom><font color="#000000"><br></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"> </font></td>
+      <td align="left" valign=bottom><font color="#000000">Photography</font></td>
+      <td align="left" valign=bottom><font color="#000000"><br></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Drawing</font></td>
+      <td align="left" valign=bottom><font color="#000000"><br></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Self defence </font></td>
+      <td align="left" valign=bottom><font color="#000000"><br></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Cooking </font></td>
+      <td align="left" valign=bottom><font color="#000000"><br></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Survival skills</font></td>
+      <td align="left" valign=bottom><font color="#000000"><br></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Basic technology </font></td>
+      
+      <td align="left" valign=bottom><font color="#000000"><br></font></td>
+
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000"> </font></td>
+      
+      <td align="left" valign=bottom><font color="#000000"><br></font></td>
+
+    </tr>
+    <tr>
+
+      <td height="21" align="left" valign=bottom><font color="#000000">Hardest skill </font></td>
+      <td align="left" valign=bottom><font color="#000000">Time management</font></td>
+      <td align="right" valign=bottom sdval="0" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Positive talk</font></td>
+      <td align="right" valign=bottom sdval="0" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+    <tr>
+      <td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+      <td align="left" valign=bottom><font color="#000000">Simplicity</font></td>
+      <td align="right" valign=bottom sdval="0" sdnum="1033;"><font color="#000000"><input type="checkbox"></font></td>
+    </tr>
+  </table><br>
+  
+  <button onclick="window.print()">Save as pdf</button>
+</div>
+
+
+
+
+
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+
+//Image uploader
+function showPreview(event){
+  if(event.target.files.length > 0){
+    var src = URL.createObjectURL(event.target.files[0]);
+    var preview = document.getElementById("file-ip-1-preview");
+    preview.src = src;
+    preview.style.display = "block";
+  }
+}
+
+</script>
+   
+</body>
+</html> 
